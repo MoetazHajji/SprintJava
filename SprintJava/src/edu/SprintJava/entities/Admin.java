@@ -31,6 +31,18 @@ public class Admin {
         this.pass = pass;
     }
 
+    public Admin(int id, String nom, String prenom, int cin, String username, String email, String pass, String role) {
+        this.id = id;
+        this.nom = nom;
+        this.prenom = prenom;
+        this.cin = cin;
+        this.username = username;
+        this.email = email;
+        this.pass = pass;
+        this.role = role;
+    }
+    
+
     public String getRole() {
         return role;
     }
@@ -112,7 +124,7 @@ public class Admin {
     
     @Override
     public String toString() {
-        return "Admin{" + "id=" + id + ", nom=" + nom + ", prenom=" + prenom + ", cin=" + cin + ", username "+ username +", email=" + email + ", pass=" + pass + '}'+"\n";
+        return "Admin{" + "id=" + id + ", nom=" + nom + ", prenom=" + prenom + ", cin=" + cin + ", username "+ username +", email=" + email + ", pass=" + pass + " , role= "+role+ '}'+"\n";
     }
 
     @Override

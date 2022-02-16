@@ -34,7 +34,7 @@ public class main {
         // adc.ajouterAdmin(ad1);
         //adc.ajouterAdmin(ad2);
         //System.out.println(adc.ListerAdmin());
-        //adc.modifierAdmin(8965, "oihjlk", "vdfsg",5343, "email@fgdsgd.tn", "fqsfazq");
+        adc.modifierAdmin(8965, "oihjlk", "vdfsg",5343, "email", "jhjhuiigu","ezaqsd","kjg");
         //adc.supprimerAdmin(ad);
 //        Client c=new Client(89658, "ahmed", "fazeni", "17/05/199", "tunis-ariana", "ahmed.fazeni@esprit.tn", 98563214, "homme");
 //        Client c1=new Client(3513, "dsfgq", "DFDSF", "17/05/199", "tunis-FdsfDSF", "DSfgds.fQSDF@esprit.tn", 455684, "FEMME");
@@ -61,7 +61,7 @@ public class main {
         //adc.affecterAdminRolle(8965, "Master");
         //adc.ajouterAdmin(ad2);
 //        System.out.println(adc.rechercherAdmin(8965));
-           adc.Login1("Mootaaz-hub","oqsjf");
+           //adc.Login1("Mootaaz-hub","oqsjf");
             //adc.checkUsername("ygug");
     }
     

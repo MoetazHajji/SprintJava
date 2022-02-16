@@ -64,21 +64,21 @@ public class AdminCRUD {
                 AdminList.add(ad);
             }
         } catch (SQLException ex) {
-            System.err.println(ex.getMessage());
+            Logger.getLogger(AdminCRUD.class.getName()).log(Level.SEVERE, null, ex);
         }
         return AdminList;
     }
 
-    public void modifierAdmin(int id_a, String nom_a, String prenom_a, int cin_a,String username_a, String email_a, String pass_a) {
+    public void modifierAdmin(int id_a, String nom_a, String prenom_a, int cin_a,String username_a, String email_a, String pass_a,String role_a) {
         try {
             String requete = "UPDATE Admin SET"
-                    + " `id`='" + id_a + "' ,`nom`='" + nom_a + "' , `prenom`='" + prenom_a + "' , `cin`='" + cin_a + "'"
-                    + "`role`='" + username_a + "',`email` ='" + email_a + "' ,`pass`='" + pass_a + "'  where `id`='" + id_a + "' ";
-            PreparedStatement pst = mc.prepareStatement(requete);
-            pst.executeUpdate();
+                    + " `id`='" + id_a + "' ,`nom`='" + nom_a + "' , `prenom`='" + prenom_a + "' , `cin`='" + cin_a + "' "
+                    + ",`username`='" + username_a + "',`email` ='" + email_a + "' ,`pass`='" + pass_a + "' , `role`='"+role_a+"'  where `id`='" + id_a + "' ";
+                PreparedStatement pst = mc.prepareStatement(requete);
+                pst.executeUpdate();
             System.err.println("Update Done !!");
         } catch (SQLException ex) {
-            System.out.println(ex.getMessage());
+            Logger.getLogger(AdminCRUD.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
     
@@ -160,8 +160,7 @@ public class AdminCRUD {
             pst.executeUpdate();
             System.out.println("Admin Affecté !!");
         } catch (SQLException ex) {
-            System.err.println(ex.getMessage());
-            
+            System.err.println(ex.getMessage());   
         }
     }
     
@@ -188,10 +187,10 @@ public class AdminCRUD {
         } catch (SQLException ex) {
             System.err.println(ex.getMessage());
         }
-        
+        return ad;
     }
     
-    public boolean LOGIN(String user,String password){
+    public boolean Login1(String user,String password){
         boolean checkUser = false;
          Admin ad=new Admin();
         try {
